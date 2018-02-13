@@ -2,10 +2,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     copy: {
-      index: {
-        files: [{ src: "index.html", dest: "dist/", filter: "isFile" }]
+      src: {
+        files: [
+          { expand: true, cwd: "src", src: "**", dest: "dist/" }
+        ]
       },
-      main: {
+      libs: {
         files: [
             { expand: true, cwd: "node_modules/reveal.js/css/", src: "**", dest: "dist/css/" },
             { expand: true, cwd: "node_modules/reveal.js/js/", src: "**", dest: "dist/js/" },
@@ -16,8 +18,8 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: ["index.html"],
-        tasks: ['copy:index']
+        files: ["**"],
+        tasks: ['copy:src']
       }
     }
   });

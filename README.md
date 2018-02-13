@@ -1,5 +1,9 @@
-# Training client-side
+# Training 
 
-[![Build Status](https://travis-ci.org/willyamalmeida/training-client-side.svg?branch=master)](https://travis-ci.org/willyamalmeida/training-client-side)
+Training about technologies
 
-[Slide](https://willyamalmeida.github.io/training-client-side/index.html)
+[![Build Status](https://travis-ci.org/willyamalmeida/training.svg?branch=master)](https://travis-ci.org/willyamalmeida/training)
+
+### List
+[Trainings](https://willyamalmeida.github.io/training/index.html)
+[Client-Side](https://willyamalmeida.github.io/training/client-side/index.html)

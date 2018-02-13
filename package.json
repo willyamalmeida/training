@@ -1,9 +1,9 @@
 {
-  "name": "training-client-side",
+  "name": "training",
   "version": "1.0.0",
-  "description": "Training client-side",
+  "description": "Training about technologies",
   "author": "willyam almeida",
-  "homepage": "https://github.com/willyamalmeida/training-client-side",
+  "homepage": "https://github.com/willyamalmeida/training",
   "main": "./index.html",
   "scripts": {
     "dev": "grunt watch--",
@@ -11,7 +11,8 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "keywords": [
-    "training"
+    "training",
+    "client-side"
   ],
   "license": "MIT",
   "private": false,
