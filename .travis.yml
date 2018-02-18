@@ -5,6 +5,3 @@ node_js:
 
 before_script:
   - npm run build
-  - git config --global user.name $GH_REF
-  - git config --global user.email 'willyamalmeida@hotmail.com'
-  - npm run deploy
