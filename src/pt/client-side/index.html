@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Training client-side</title>
+		<title>Treinamento client-side</title>
 
-		<meta name="description" content="Training client-side">
+		<meta name="description" content="Treinamento client-side">
 		<meta name="author" content="Willyam Almeida">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,18 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../lib/css/zenburn.css">
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -42,24 +42,24 @@
 				<section>
 					<h1>Client-Side</h1>
 					<p>
-						<small>By <a href="https://github.com/willyamalmeida/training" target="_blank">Willyam Almeida</a></small>
+						<small>Por <a href="https://github.com/willyamalmeida/training" target="_blank">Willyam Almeida</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Purpose of the module</h2>
+					<h2>Objetivos do Módulo</h2>
 					<p>
-						Understand and review some subjects strictly on client-side
+						Compreender ou revisar alguns assuntos estritamente sobre client-side, que servirão de base para construção de telas e componentes.
 					</p>
 				</section>
 
 				<section>
-					<h2>Schedule</h2>
+					<h2>Agenda</h2>
 					<p class="fragment fade-up">Element Inspector</p>
-					<p class="fragment fade-up">Client-side data flow</p>
-					<p class="fragment fade-up">HTML and rendering process</p>
-					<p class="fragment fade-up">CSS review</p>
-					<p class="fragment fade-up">Javascript review and introductions on some advanced concepts</p>
+					<p class="fragment fade-up">Fluxo de dados Cliente/Servidor</p>
+					<p class="fragment fade-up">HTML e processo de renderização</p>
+					<p class="fragment fade-up">Revisão sobre CSS</p>
+					<p class="fragment fade-up">Revisão sobre Javascript e introduções sobre alguns conceitos avançados</p>
 					<p class="fragment fade-up">jQuery</p>						
 				</section>
 
@@ -69,27 +69,27 @@
 
 				<section>
 					<section>
-						<h2>Type of Element Inspector</h2>
+						<h2>Tipos de Element Inspector</h2>
 						<p class="fragment grow highlight-red">IE</p>
 						<p class="fragment grow highlight-blue">Firefox</p>
 						<p class="fragment grow highlight-green">Chrome</p>
 					</section>
 					<section>
-						<h2>Key features</h2>
-						<p class="fragment grow">Inspect element</p>
-						<p class="fragment grow">Network</p>
-						<p class="fragment grow">Debugger</p>
+						<h2>Principais Funcionalidades</h2>
+						<p class="fragment grow">Inspecionar elemento</p>
+						<p class="fragment grow">Rede</p>
+						<p class="fragment grow">Javascript debugger</p>
 						<p class="fragment grow">Console</p>
 					</section>
 				</section>
 
 				<section>
-					<h1>Data Flow</h1>
+					<h1>Fluxo de Dados</h1>
 				</section>
 
 				<section>
 					<section>
-						<h2>Main data format</h2>
+						<h2>Principais formatos de dados</h2>
 						<ul>
 							<li>Query String</li>
 							<li>JSON</li>
@@ -130,7 +130,7 @@
 				</section>
 
 				<section>
-					<h2>HTTP main verbs</h2>
+					<h2>Principais verbos do HTTP</h2>
 					<p>GET</p>
 					<p>POST</p>
 				</section>
@@ -138,12 +138,16 @@
 				<section>
 					<section>
 						<h2>GET</h2>
-						<p class="fragment fade-right">Used to request data</p>
-						<p class="fragment fade-right">Parameters sent by URL</p>
-						<p class="fragment fade-right">Can be stored in history</p>
-						<p class="fragment fade-right">Parameters are exposed</p>
-						<p class="fragment fade-right">Has size limitation</p>
-						<p class="fragment fade-right">Each server-side language has a way of retrieving the parameters</p>
+						<p class="fragment fade-right">Utilizado para requisitar dados</p>
+						<p class="fragment fade-right">Parâmetros enviados via URL</p>
+						<p class="fragment fade-right">Podem ser armazenados em histórico</p>
+						<p class="fragment fade-right">Parâmetros ficam expostos</p>
+						<p class="fragment fade-right">Tem limitação de tamanho</p>
+						<p class="fragment fade-right">Cada linguagem de server-side tem uma forma de recuperar os parâmetros</p>
+					</section>
+					<section>
+						<h2>Exemplo</h2>
+						get.png
 					</section>
 					<section>
 						<h2>ASP.NET MVC</h2>
@@ -181,14 +185,15 @@ server.listen(8080, "localhost", () => {
 				<section>
 					<section>
 						<h2>POST</h2>
-						<p class="fragment fade-up">Used to send data</p>
-						<p class="fragment fade-up">Parameters go in the HTTP call body</p>
-						<p class="fragment fade-up">No size restriction</p>
-						<p class="fragment fade-up">Supports various types of data format</p>
-						<p class="fragment fade-up">Need to inform the content-type HTTP header so that the language (if it has a parser) interprets correctly</p>						
+						<p class="fragment fade-up">Usados para enviar dados</p>
+						<p class="fragment fade-up">Parâmetros vão no corpo da chamada HTTP</p>
+						<p class="fragment fade-up">Não tem restrição de tamanho</p>
+						<p class="fragment fade-up">Suportam diversos tipos de formato de dados</p>
+						<p class="fragment fade-up">Necessário informar o cabeçalho HTTP content-type para que a linguagem (se tiver um parser) interprete corretamente</p>						
 					</section>		
 					<section>
 						<h2>POST</h2>
+						post.png
 					</section>			
 				</section>
 
@@ -214,15 +219,15 @@ server.listen(8080, "localhost", () => {
 				</section>
 
 				<section>
-					<h2>...End!</h2>
+					<h2>...Fim!</h2>
 				</section>
 
 			</div>
 
 		</div>
 
-		<script src="../lib/js/head.min.js"></script>
-		<script src="../js/reveal.js"></script>
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
 
 		<script>
 
@@ -237,13 +242,13 @@ server.listen(8080, "localhost", () => {
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../plugin/search/search.js', async: true },
-					{ src: '../plugin/zoom-js/zoom.js', async: true },
-					{ src: '../plugin/notes/notes.js', async: true }
+					{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../plugin/search/search.js', async: true },
+					{ src: '../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../plugin/notes/notes.js', async: true }
 				]
 			});
 
