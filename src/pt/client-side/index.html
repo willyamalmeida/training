@@ -76,10 +76,18 @@
 					</section>
 					<section>
 						<h2>Principais Funcionalidades</h2>
-						<p class="fragment grow">Inspecionar elemento</p>
-						<p class="fragment grow">Rede</p>
-						<p class="fragment grow">Javascript debugger</p>
-						<p class="fragment grow">Console</p>
+						<p class="fragment grow">
+							<small><a href="https://developer.mozilla.org/pt-BR/docs/Tools/Page_Inspector" target="_blank">Inspecionar elemento</a></small>
+						</p>
+						<p class="fragment grow">							
+							<small><a href="https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor" target="_blank">Rede</a></small>
+						</p>
+						<p class="fragment grow">
+							<small><a href="https://developer.mozilla.org/pt-BR/docs/Tools/Depurador" target="_blank">Javascript debugger</a></small>
+						</p>
+						<p class="fragment grow">
+							<small><a href="https://developer.mozilla.org/pt-BR/docs/Tools/Web_Console" target="_blank">Console</a></small>
+						</p>
 					</section>
 				</section>
 
@@ -131,8 +139,15 @@
 
 				<section>
 					<h2>Principais verbos do HTTP</h2>
-					<p>GET</p>
-					<p>POST</p>
+					<p>						
+						<small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/GET" target="_blank">GET</a></small>
+					</p>
+					<p>						
+						<small><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" target="_blank">POST</a></small>
+					</p>
+					<p>
+						<small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP" target="_blank">Mais informações...</a></small>
+					</p>
 				</section>
 
 				<section>
@@ -198,17 +213,68 @@ server.listen(8080, "localhost", () => {
 				</section>
 
 				<section>
-					<h2>Chamada síncrona</h2>
+					<section>
+						<h2>Chamada síncrona vs assíncrona</h2>					
+					</section>
+					<section>
+						<h2>Síncrona</h2>
+						<pre><code class="hljs" data-trim contenteditable>									
+var request = new XMLHttpRequest();
+request.open('GET', '/home', false);  // `false` makes the request synchronous
+request.send(null);
+
+if (request.status === 200) {
+	console.log(request.responseText);
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Assíncrona</h2>
+						<pre><code class="hljs" data-trim contenteditable>									
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "/home", true);
+xhr.onload = function (e) {
+	if (xhr.readyState === 4) {
+		if (xhr.status === 200) {
+			console.log(xhr.responseText);
+		} else {
+			console.error(xhr.statusText);
+		}
+	}
+};
+xhr.onerror = function (e) {
+	console.error(xhr.statusText);
+};
+xhr.send(null);
+						</code></pre>
+					</section>
 				</section>
 
 				<section>
 					<h2>AJAX</h2>
+					<p>
+						Asynchronous JavaScript And XML
+					</p>					
+					<pre><code class="hljs" data-trim contenteditable>									
+// Old compatibility code, no longer needed.
+if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+	httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE 6 and older
+	httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+}	
+
+httpRequest.open('GET', 'http://localhost/home', true);
+httpRequest.send();
+					</code></pre>
+					<small><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started" target="_blank" >Mais informações...</a></small>					
 				</section>
 
 				<section>
 					<h2>Processo de renderização</h2>
 				</section>
 
+				<!--/////////////////////////////////////////////////-->
+				<!--HTML-->
 				<section>
 					<h1>HTML</h1>
 					<h4>Hypertext Markup Language</h4>
