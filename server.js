@@ -12,6 +12,8 @@ const server = http.createServer((req, res) => {
     if(req.url === "/"){
         res.end("<h1>Home</h1>");
     }
+
+    res.end("<h1>Not found</h1>");
 });
 
 server.listen(8080, "localhost", () => {

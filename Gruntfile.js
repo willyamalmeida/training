@@ -9,10 +9,10 @@ module.exports = function(grunt) {
       },
       libs: {
         files: [
-            { expand: true, cwd: "node_modules/reveal.js/css/", src: "**", dest: "dist/css/" },
-            { expand: true, cwd: "node_modules/reveal.js/js/", src: "**", dest: "dist/js/" },
-            { expand: true, cwd: "node_modules/reveal.js/plugin/", src: "**", dest: "dist/plugin/" },
-            { expand: true, cwd: "node_modules/reveal.js/lib/", src: "**", dest: "dist/lib/" }
+            { expand: true, cwd: "node_modules/reveal.js/css/", src: "**", dest: "dist/libs/css/" },
+            { expand: true, cwd: "node_modules/reveal.js/js/", src: "**", dest: "dist/libs/js/" },
+            { expand: true, cwd: "node_modules/reveal.js/plugin/", src: "**", dest: "dist/libs/plugin/" },
+            { expand: true, cwd: "node_modules/reveal.js/lib/", src: "**", dest: "dist/libs/lib/" }
         ]
       }
     },
