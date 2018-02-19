@@ -5,3 +5,13 @@ node_js:
 
 before_script:
   - npm run build
+
+deploy:
+  provider: pages 
+  skip-cleanup: true
+  keep-history: true
+  api_key: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  target-branch: gh-pages
+  local-dir: dist/*
+  email: willyamalmeida@hotmail.com
+  name: "Deploy Travis"
