@@ -12,6 +12,6 @@ deploy:
   keep-history: true
   github_token: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure
   target-branch: gh-pages
-  local-dir: dist/*
+  local-dir: dist
   email: willyamalmeida@hotmail.com
   name: "Deploy Travis"
