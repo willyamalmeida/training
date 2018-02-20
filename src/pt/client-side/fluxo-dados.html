@@ -12,29 +12,41 @@
     <hr />
     <h2>Assíncrona</h2>
     <button id="btnAssincrona">Clique aqui</button>
+    <hr />
+    <div id="status" style="width: 200; height: 50"></div>
+    <hr />
+    <input type="text" />
 
     <script type="text/javascript">
         var btnSincrona = document.getElementById("btnSincrona");
         var btnAssincrona = document.getElementById("btnAssincrona");
+        var elStatus = document.getElementById("status");
+        var _elStatus = elStatus;
 
         btnSincrona.addEventListener("click", function() {
             let request = new XMLHttpRequest();
-            request.open('GET', '/', false); 
+            request.open('GET', 'http://localhost:8080/home', false); 
             request.send(null);
 
             if (request.status === 200) {
+                _elStatus.style.backgroundColor = "gray";
+                _elStatus.style.color = "black";
+                _elStatus.innerText = "Síncrona";
                 console.log(request.responseText);
-                alert("Resp: " + request.responseText);
+                //alert("Resp: " + request.responseText);
             }
         });
 
-        btnSincrona.addEventListener("click", function() {
+        btnAssincrona.addEventListener("click", function() {
             let xhr = new XMLHttpRequest();
-            xhr.open("GET", "/", true);
+            xhr.open("GET", "http://localhost:8080/home", true);
             xhr.onload = function (e) {
                 if (xhr.readyState === 4 && xhr.status === 200) {
+                    _elStatus.style.backgroundColor = "blue";
+                    _elStatus.style.color = "white";
+                    _elStatus.innerText = "Assíncrona";
                     console.log(xhr.responseText);
-                    alert("Resp: " + xhr.responseText);
+                    //alert("Resp: " + xhr.responseText);
                 }
             };
 
