@@ -63,6 +63,8 @@
 					<p class="fragment fade-up">jQuery</p>						
 				</section>
 
+				<!--/////////////////////////////////////////////////-->
+				<!--Element Inspector-->
 				<section>
 					<h1>Element Inspector</h1>
 				</section>
@@ -91,6 +93,8 @@
 					</section>
 				</section>
 
+				<!--/////////////////////////////////////////////////-->
+				<!--Fluxo de dados-->
 				<section>
 					<h1>Fluxo de Dados</h1>
 				</section>
@@ -146,7 +150,7 @@
 						<small><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" target="_blank">POST</a></small>
 					</p>
 					<p>
-						<small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP" target="_blank">Mais informações...</a></small>
+						<small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP" target="_blank">Basico sobre HTTP</a></small>
 					</p>
 				</section>
 
@@ -208,7 +212,7 @@ server.listen(8080, "localhost", () => {
 					</section>		
 					<section>
 						<h2>POST</h2>
-						<img width="362" height="68" data-src="../../img/client-side/post.png" alt="GET">
+						<img width="362" height="68" data-src="../../img/client-side/post.png" alt="POST">
 					</section>			
 				</section>
 
@@ -270,7 +274,10 @@ httpRequest.send();
 				</section>
 
 				<section>
-					<h2>Processo de renderização</h2>
+					<h2>Exemplos de fluxos de dados</h2>
+					<small>
+						<a href="./fluxo-dados.html" target="_blank">Exemplo</a>
+					</small>
 				</section>
 
 				<!--/////////////////////////////////////////////////-->
@@ -279,16 +286,79 @@ httpRequest.send();
 					<h1>HTML</h1>
 					<h4>Hypertext Markup Language</h4>
 				</section>
+
+				<section>
+					<h2>Principais Partes</h2>
+					<p>DOCTYPE</p>
+					<p>Header</p>
+					<p>Body</p>
+					<pre><code class="hljs" data-trim contenteditable>									
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Titulo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">    
+		<link rel="stylesheet" href="styles.css">
+		<scrip src="script.js"></scrip>	
+	</head>
+	<body>
+		<h1>Cabeçalho</h1>
+		<p>Conteúdo da página.</p>
+	</body>
+	</html>
+					</code></pre>												
+				</section>
 				
+				<section>
+					<h2>O DOM</h2>
+					<h4>Document Object Model</h4>					
+					<img width="778" height="400" data-src="../../img/client-side/dom.png" alt="DOM">
+					<small>
+						Mais do que um emaranhado de tags, enxergue o documento html como uma <b>árvore de HTML Elements</b>						
+					</small>
+				</section>
+
+				<section>
+					<section>
+						<h2>Processo de renderização</h2>
+						<small>
+							<img width="630" height="292" data-src="../../img/client-side/render.png" alt="Renderizacao">					
+						</small>
+					</section>
+					<section>
+						<h2>Processo de renderização</h2>
+						<p class="fragment fade-up">O DOM</p>
+						<p class="fragment fade-up">Estilos</p>
+						<p class="fragment fade-up">Árvore de Renderização</p>
+						<p class="fragment fade-up">Paint</p>
+						<p class="fragment fade-up">Repaint</p>
+						<p class="fragment fade-up">Reflow</p>
+					</section>
+					<section>
+						<h2>O DOM + CSSOM</h2>
+						<small>
+							<img width="778" height="431" data-src="../../img/client-side/render-tree.png" alt="Render-tree">					
+						</small>
+					</section>
+				</section>
+				
+				<!--/////////////////////////////////////////////////-->
+				<!--CSS-->
 				<section>
 					<h1>CSS</h1>
 					<h4>Cascade Style Sheets</h4>
 				</section>
 
+				<!--/////////////////////////////////////////////////-->
+				<!--Javascript-->
 				<section>
 					<h1>Javascript</h1>
 				</section>
 
+				<!--/////////////////////////////////////////////////-->
+				<!--jQuey-->
 				<section>
 					<h1>jQuery</h1>
 				</section>
