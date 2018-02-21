@@ -49,18 +49,18 @@
 				<section>
 					<h2>Objetivos do Módulo</h2>
 					<p>
-						Compreender ou revisar alguns assuntos estritamente sobre client-side, que servirão de base para construção de telas e componentes.
+						Compreender e revisar alguns assuntos estritamente sobre client-side, que servirão de base para construção de telas e componentes.
 					</p>
 				</section>
 
 				<section>
 					<h2>Agenda</h2>
 					<p class="fragment fade-up">Element Inspector</p>
-					<p class="fragment fade-up">Fluxo de dados Cliente/Servidor</p>
-					<p class="fragment fade-up">HTML e processo de renderização</p>
-					<p class="fragment fade-up">Revisão sobre CSS</p>
+					<p class="fragment fade-left">Fluxo de dados Cliente/Servidor</p>
+					<p class="fragment fade-right">HTML e processo de renderização</p>
+					<p class="fragment fade-down">Revisão sobre CSS</p>
 					<p class="fragment fade-up">Revisão sobre Javascript e introduções sobre alguns conceitos avançados</p>
-					<p class="fragment fade-up">jQuery</p>						
+					<p class="fragment fade-right">jQuery</p>						
 				</section>
 
 				<!--/////////////////////////////////////////////////-->
@@ -158,11 +158,11 @@
 					<section>
 						<h2>GET</h2>
 						<p class="fragment fade-right">Utilizado para requisitar dados</p>
-						<p class="fragment fade-right">Parâmetros enviados via URL</p>
-						<p class="fragment fade-right">Podem ser armazenados em histórico</p>
-						<p class="fragment fade-right">Parâmetros ficam expostos</p>
+						<p class="fragment fade-up">Parâmetros enviados via URL</p>
+						<p class="fragment fade-left">Podem ser armazenados em histórico</p>
+						<p class="fragment fade-down">Parâmetros ficam expostos</p>
 						<p class="fragment fade-right">Tem limitação de tamanho</p>
-						<p class="fragment fade-right">Cada linguagem de server-side tem uma forma de recuperar os parâmetros</p>
+						<p class="fragment fade-up">Cada linguagem de server-side tem uma forma de recuperar os parâmetros</p>
 					</section>
 					<section>
 						<h2>Exemplo</h2>
@@ -203,9 +203,9 @@ server.listen(8080, "localhost", () => {
 					<section>
 						<h2>POST</h2>
 						<p class="fragment fade-up">Usados para enviar dados</p>
-						<p class="fragment fade-up">Parâmetros vão no corpo da chamada HTTP</p>
-						<p class="fragment fade-up">Não tem restrição de tamanho</p>
-						<p class="fragment fade-up">Suportam diversos tipos de formato de dados</p>
+						<p class="fragment fade-left">Parâmetros vão no corpo da chamada HTTP</p>
+						<p class="fragment fade-right">Não tem restrição de tamanho</p>
+						<p class="fragment fade-down">Suportam diversos tipos de formato de dados</p>
 						<p class="fragment fade-up">Necessário informar o cabeçalho HTTP content-type para que a linguagem (se tiver um parser) interprete corretamente</p>						
 					</section>		
 					<section>
@@ -278,6 +278,14 @@ httpRequest.send();
 					</small>
 				</section>
 
+				<section>
+					<h2>Tópicos para estudos</h2>
+					<small>						
+						<p class="fragment grow">REST e RESTful</p>
+						<p class="fragment grow">Server-Side, aplicando REST com NodeJs e ASP.NET Web Api</p>
+					</small>
+				</section>
+
 				<!--/////////////////////////////////////////////////-->
 				<!--HTML-->
 				<section>
@@ -287,9 +295,9 @@ httpRequest.send();
 
 				<section>
 					<h2>Principais Partes</h2>
-					<p>DOCTYPE</p>
-					<p>Header</p>
-					<p>Body</p>
+					<p class="fragment grow">DOCTYPE</p>
+					<p class="fragment grow">Header</p>
+					<p class="fragment grow">Body</p>
 					<img width="610" height="289" data-src="../../img/client-side/html.png" alt="HTML">											
 				</section>
 				
@@ -312,11 +320,11 @@ httpRequest.send();
 					<section>
 						<h2>Processo de renderização</h2>
 						<p class="fragment fade-up">O DOM</p>
-						<p class="fragment fade-up">Estilos</p>
-						<p class="fragment fade-up">Árvore de Renderização</p>
-						<p class="fragment fade-up">Paint</p>
+						<p class="fragment fade-down">Estilos</p>
+						<p class="fragment fade-right">Árvore de Renderização</p>
+						<p class="fragment fade-left">Paint</p>
 						<p class="fragment fade-up">Repaint</p>
-						<p class="fragment fade-up">Reflow</p>
+						<p class="fragment fade-down">Reflow</p>
 					</section>
 					<section>
 						<h2>O DOM + CSSOM</h2>
@@ -328,9 +336,11 @@ httpRequest.send();
 
 				<section>
 					<h2>Tópicos para estudos</h2>
-					<p>Estrutura HTML</p>
-					<p>Tags</p>
-					<p>Semântica</p>
+					<small>
+						<p class="fragment grow">Estrutura HTML</p>
+						<p class="fragment grow">Tags</p>
+						<p class="fragment grow">Semântica</p>
+					</small>
 				</section>
 				
 				<!--/////////////////////////////////////////////////-->
@@ -348,15 +358,12 @@ httpRequest.send();
 				<section>
 					<h2>CSS</h2>
 					<p class="fragment grow">Atenção ao conceito!</p>
-					<p class="fragment grow">
-						Vinculando folhas de estilo a documentos
-					</p>
+					<p class="fragment grow">Vinculando folhas de estilo a documentos</p>
 					<ul class="fragment grow">
 						<li class="fragment fade-up highlight-blue">Estilos inline</li>
 						<li class="fragment fade-up highlight-blue">Estilos incorporados</li>
 						<li class="fragment fade-up highlight-blue">Estilos externos</li>
 					</ul>
-					<p class="fragment grow">Contexto da Aplicação</p>
 				</section>
 
 				<section>
@@ -366,7 +373,6 @@ httpRequest.send();
 						<p class="fragment grow">Id</p>
 						<p class="fragment grow">Classes</p>
 						<p class="fragment grow">Atributo</p>
-						<p class="fragment grow">Conceito de que tudo é um atributo</p>
 					</section>
 					<section>
 						<h2>Pseudo seletores e operadores</h2>
@@ -389,24 +395,24 @@ httpRequest.send();
 
 				<section>
 					<h2>Comportamentos fundamentais</h2>
-					<p>Conceito de que todo elemento é customizado e seus comportamentos padrões são customizáveis</p>
-					<p>Exibição: inline, inline-block, block, table</p>
-					<p>Float: left e right</p>
-					<p>Posicionamento: absolute, relative, fixed, normal</p>
+					<p class="fragment grow">Exibição: inline, inline-block, block, table</p>
+					<p class="fragment grow">Float: left e right</p>
+					<p class="fragment grow">Posicionamento: absolute, relative, fixed, normal</p>
 				</section>
 
 				<section>
 					<section>
 						<h2>Tópicos para estudos</h2>
 						<small>							
-							<p>Box model</p>
-							<p>Posicionamento</p>
-							<p>Seletores</p>
-							<p>Background, bordas, sombras, cores e opacidade</p>
-							<p>Fontes, grandientes</p>
-							<p>Layout, template e box layout flexível</p>
-							<p>Animações, transformações 2D e 3D, transições</p>
-							<p>Media queries</p>
+							<p class="fragment grow highlight-green">Box model</p>
+							<p class="fragment grow highlight-green">Posicionamento</p>
+							<p class="fragment grow highlight-green">Seletores</p>
+							<p class="fragment grow">Background, bordas, sombras, cores e opacidade</p>
+							<p class="fragment grow">Fontes, grandientes</p>
+							<p class="fragment grow highlight-green">Layout, template e box layout flexível</p>
+							<p class="fragment grow">Animações, transformações 2D e 3D, transições</p>
+							<p class="fragment grow">Media queries</p>
+							<p class="fragment grow">Pré-processadores, SAAS, LESS</p>
 						</small>
 					</section>
 					<section>
@@ -466,13 +472,18 @@ httpRequest.send();
 
 				<section>
 					<h2>Tópicos para estudos</h2>
-					<p>Operadores</p>
-					<p>Declarações e estruturas</p>
-					<p>Objetos e Array</p>
-					<p>Funções, Strings, Math, Number, RegExp, Date</p>
-					<p>BOM Browser Object Model</p>
-					<p>DOM - HTML - core - estilos - eventos</p>
-					<p>Formulários e AJAX</p>
+					<small>
+						<p class="fragment grow">Operadores</p>
+						<p class="fragment grow">Declarações e estruturas</p>
+						<p class="fragment grow">Objetos e Array</p>
+						<p class="fragment grow">Funções, Strings, Math, Number, RegExp, Date</p>
+						<p class="fragment grow">BOM Browser Object Model</p>
+						<p class="fragment grow">DOM - HTML - core - estilos - eventos</p>
+						<p class="fragment grow">Formulários e AJAX</p>
+						<p class="fragment grow">Programação funcional</p>
+						<p class="fragment grow">Novidades ES6</p>
+						<p class="fragment grow">Boas práticas, padrões e performance</p>
+					</small>
 				</section>
 
 				<!--/////////////////////////////////////////////////-->
@@ -495,6 +506,13 @@ httpRequest.send();
 				<section>
 					<h2>Element inspector</h2>
 					<small class="highlight-blue">Demo</small>
+				</section>
+
+				<section>
+					<h2>Tópicos para estudos</h2>
+					<small>
+						<p class="fragment grow highlight-current-green">Javascript</p>
+					</small>
 				</section>
 
 				<!--/////////////////////////////////////////////////-->

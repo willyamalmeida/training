@@ -2,10 +2,9 @@ const http = require("http");
 const url = require("url");
 
 const server = http.createServer((req, res) => {
-    debugger;
-
     setTimeout(() => {
-
+        debugger;
+                
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Request-Method', '*');
         res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
@@ -23,7 +22,6 @@ const server = http.createServer((req, res) => {
         res.end("<h1>Not found</h1>");
 
     }, 5000);
-
 });
 
 server.listen(8080, "localhost", () => {
