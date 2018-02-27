@@ -37,3 +37,12 @@ $(".componente1 .listaDeItens .item .titulo")
 
 $(".componente2 .titulo")
     .css("color","red");
+
+
+// .hide()
+// .show()
+// .toggle()
+// .fadeIn()
+// .fadeOut()
+// .slideDown()
+// .slideUp()
