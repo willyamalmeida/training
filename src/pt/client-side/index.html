@@ -58,11 +58,45 @@
 					<small>
 						<p class="fragment fade-up">Element Inspector</p>
 						<p class="fragment fade-left">Fluxo de dados Cliente/Servidor</p>
-						<p class="fragment fade-right">HTML e processo de renderização</p>
+						<p class="fragment fade-right">Revisão sobre HTML e processo de renderização</p>
 						<p class="fragment fade-down">Revisão sobre CSS</p>
 						<p class="fragment fade-up">Revisão sobre Javascript e introduções sobre alguns conceitos avançados</p>
 						<p class="fragment fade-right">jQuery</p>
 					</small>
+				</section>
+
+				<!--/////////////////////////////////////////////////-->
+				<!--Antes de mais nada...-->				
+				<section>
+					<h1>Antes de mais nada...</h1>
+				</section>
+
+				<section>					
+					<h2>O que é cliente-side?</h2>
+				</section>
+
+				<section>
+					<h2>Fluxo</h2>
+					<img src="../../img/client-side/fluxo-clientside.png">					
+					</img>
+				</section>
+
+				<section>
+					<h2>Browser</h2>
+					<img src="../../img/client-side/browser-clientside.png">					
+					</img>
+				</section>
+
+				<section>
+					<h2>DOM/CSSSOM</h2>
+					<img src="../../img/client-side/dom-clientside.png">					
+					</img>
+				</section>
+
+				<section>
+					<h2>Resumindo...</h2>
+					<img src="../../img/client-side/efeito-clientside.gif">					
+					</img>
 				</section>
 
 				<!--/////////////////////////////////////////////////-->
@@ -263,26 +297,24 @@ xhr.onerror = function (e) {
 xhr.send(null);
 						</code></pre>
 					</section>
-				</section>
+					<section>
+						<h2>Exemplo com jQuery</h2>					
+						<pre><code class="hljs" data-trim contenteditable>									
+$.ajax({
+	method: 'POST',
+	url: 'Salvar',
+	dataType: 'json',
+	contentType: 'application/json',	
+	data: data,
+	async: false, //opcional
+	success: function (resultado) {
+		//implementação...
+	}
+});
+						</code></pre>					
+					</section>
 
-				<section>
-					<h2>AJAX</h2>
-					<p>
-						Asynchronous JavaScript And XML
-					</p>					
-					<pre><code class="hljs" data-trim contenteditable>									
-// Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
-	httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 6 and older
-	httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-}	
-
-httpRequest.open('GET', 'http://localhost:8080/home', true);
-httpRequest.send();
-					</code></pre>
-					<small><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started" target="_blank" >Mais informações...</a></small>					
-				</section>
+				</section>	
 
 				<section>
 					<h2>Fluxos de dados</h2>
@@ -316,12 +348,15 @@ httpRequest.send();
 					</small>
 					&nbsp;
 					<img width="610" height="289" data-src="../../img/client-side/html.png" alt="HTML">											
+					<br/>
+					<a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure" target="_blank">Mais informações...</a>						
 				</section>
 				
 				<section>
 					<h2>O DOM</h2>
 					<h4>Document Object Model</h4>					
 					<img width="778" height="400" data-src="../../img/client-side/dom.png" alt="DOM">
+					&nbsp;
 					<small>
 						Mais do que um emaranhado de tags, enxergue o documento html como uma <b>árvore de HTML Elements</b>						
 					</small>
