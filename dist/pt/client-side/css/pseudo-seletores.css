@@ -1,0 +1,46 @@
+body {
+    font-size: 14px;
+    font-family: "helvetica";
+}
+
+.separadorDeComponente { 
+  border: 1px dashed #ddd;
+  padding: 5px;
+}
+
+body > .titulo {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+
+/* Componente 1 */
+/* ************ */
+
+.componente1 { 
+  margin-bottom: 10px;
+}
+
+.componente1 .titulo { 
+  
+}
+
+.componente1 .listaDeItens { 
+
+}
+
+.componente1 .listaDeItens .item { 
+  border: 1px solid #ddd;
+  margin: 10px 0px;
+  padding: 5px
+}
+
+.componente1 .listaDeItens .item .titulo { 
+  color: navy;
+}
+
+/* Componente 2 */
+/* ************ */
+
+.componente2 .titulo { 
+  color: red;
+}

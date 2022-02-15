@@ -1,0 +1,13 @@
+.row {
+    display: flex; flex-direction: row;    
+}
+
+.row .col {
+    margin-right: 15px
+}
+
+.semBorda {
+    border: none !important;
+    background-color: #222 !important; 
+    box-shadow: none !important;
+}
